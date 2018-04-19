@@ -1,0 +1,57 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass functions.
+// -----------------------------------------------------------------------------
+
+/// Native `url(..)` function wrapper
+/// @param {String} $base - base URL for the asset
+/// @param {String} $type - asset type folder (e.g. `fonts/`)
+/// @param {String} $path - asset path
+/// @return {Url}
+@function asset($base, $type, $path) {
+  @return url($base + $type + $path);
+}
+
+/// Returns URL to an image based on its path
+/// @param {String} $path - image path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function image($path, $base: $base-url) {
+  @return asset($base, 'images/', $path);
+}
+
+/// Returns URL to a font based on its path
+/// @param {String} $path - font path
+/// @param {String} $base [$base-url] - base URL
+/// @return {Url}
+/// @require $base-url
+@function font($path, $base: $base-url) {
+  @return asset($base, 'fonts/', $path);
+}
+
+@function layer($name) {
+  @if map-has-key($layer, $name) {
+    @return map-get($layer, $name);
+  }
+
+  @warn "The key #{$name} is not in the map ’$layer’";
+  @return null;
+};
+
+@function padding($name) {
+  @if map-has-key($padding, $name) {
+    @return map-get($padding, $name);
+  }
+
+  @warn "The key #{$name} is not in the map ’$padding’";
+  @return null;
+};
+
+@function margin($name) {
+  @if map-has-key($margin, $name) {
+    @return map-get($margin, $name);
+  }
+
+  @warn "The key #{$name} is not in the map ’$margin’";
+  @return null;
+};
