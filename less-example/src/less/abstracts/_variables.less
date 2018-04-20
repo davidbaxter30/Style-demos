@@ -5,11 +5,11 @@
 
 /// Regular font family
 /// @type List
-@text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+@text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
 
 /// Code (monospace) font family
 /// @type List
-@code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+@code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace;
 
 /// z-index layer values
 /// @type List
@@ -17,75 +17,59 @@
 
 /// padding values
 /// @type List
-@padding: (
-        'small': 5px,
-        'medium': 10px,
-        'large': 20px
-) !default;
+@padding: small 5px, medium 10px, large 20px;
 
 /// margin values
 /// @type List
-@margin: (
-        'small': 10px,
-        'medium': 20px,
-        'large': 40px
-) !default;
+@margin: small 10px, medium 20px, large 40px;
 
 
 /// Container's maximum width
 /// @type Length
-@max-width: 1180px !default;
+@max-width: 1180px;
 
 
 // Map with much breakpoints
-@breakpoints: (
-        small: 320px,
-        medium: 600px,
-        large: 768px
-);
+@breakpoints: small 320px, medium 600px, large 768px;
 
 /// Breakpoints map
 /// @prop {String} keys - Keys are identifiers mapped to a given length
 /// @prop {Map} values - Values are actual breakpoints expressed in pixels
-@breakpoints: (
-        'small': 320px,
-        'medium': 768px,
-        'large': 1024px,
-) !default;
+@breakpoints: small 320px,medium 768px,large 1024px;
 
 @border-radius: 3px;
 
 /// Copy text color
 /// @type Color
-@text-color: #2d3037 !default;
+@text-color: #2d3037;
 
 /// Primary color
 /// @type Color
-@primary: #1e507f !default;
+@primary: #1e507f;
 
 /// Main brand color
 /// @type Color
-@secondary: #E8C547 !default;
+@secondary: #E8C547;
 
 /// Main brand color
 /// @type Color
-@warn: #ff6a6a !default;
+@warn: #ff6a6a;
 
 /// accent color
 /// @type Color
-@accent: #CDD1C4 !default;
+@accent: #CDD1C4;
 
 /// grey
 /// @type Color
-@grey: #4D5061 !default;
+@grey: #4D5061;
 
 /// Dark grey
 /// @type Color
-@dark-grey: #30323D !default;
+@dark-grey: #30323D;
 
 /// Light grey
 /// @type Color
-@light-grey: lighten(@grey, 10) !default;
+@light-grey: lighten(@grey, 10);
 
 
 /// Shadow Heights
@@ -103,15 +87,13 @@
 
 
 // buttons
-@buttons: (
-  primary: (@primary, @accent),
-  secondary: (@secondary, @primary),
-  disabled: (@light-grey, lighten(@light-grey, 50)),
-  warn: (@warn, lighten(@light-grey, 50))
-);
+@buttons: primary(@primary, @accent),
+secondary(@secondary, @primary),
+disabled(@light-grey, lighten(@light-grey, 50)),
+warn(@warn, lighten(@light-grey, 50));
 
 /// Relative or absolute URL where all assets are served from
 /// @type String
 /// @example scss - When using a CDN
 ///   @base-url: 'http://cdn.example.com/assets/';
-@base-url: '/assets/' !default;
+@base-url: '/assets/';

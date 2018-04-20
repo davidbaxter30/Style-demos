@@ -18,12 +18,12 @@
  * 3. Leave some space on the edges, especially valuable on small screens
  */
 .container {
-  max-width: $max-width; /* 1 */
-  margin-left: auto; /* 2 */
-  margin-right: auto; /* 2 */
-  padding-left: 20px; /* 3 */
-  padding-right: 20px; /* 3 */
-  width: 100%; /* 1 */
+  max-width: @max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
  }
 
 .section {
@@ -31,24 +31,24 @@
   margin-bottom: margin(large);
 
   > h1 {
-    color: $grey;
+    color: @grey;
   }
 }
 
 .card {
   padding: 0;
   margin: margin(medium) 0;
-  box-shadow: $shadow-2;
-  @include border-radius($border-radius);
+  box-shadow: @shadow-2;
+  //.border-radius(@border-radius);
   overflow: hidden;
 
   > h3:first-child {
-    background-color: $accent;
+    background-color: @accent;
     width: 100%;
     height: auto;
     padding: padding(medium);
     margin: 0;
-    box-shadow: $shadow-1;
+    box-shadow: @shadow-1;
   }
 
   > div, > p {
@@ -88,19 +88,19 @@
   width: 1px;
 }
 
-@each $name, $value in $buttons {
-  .#{$name}-button {
-    background-color: nth($value, 1);
-    color: nth($value, 2);
+.for-each(@name, @value in @buttons)  {
+  .@{name}-button {
+    background-color: at(@value, 1);
+    color: at(@value, 2);
     padding: padding(medium) padding(large);
-    @include border-radius($border-radius);
-    @include box-shadow($shadow-3);
+    //@include border-radius(@border-radius);
+    //@include box-shadow(@shadow-3);
     cursor: pointer;
     border: 0;
 
     @include on-event() {
-      @include box-shadow($shadow-1);
-      background-color: lighten(nth($value, 1), 10);
+      //@include box-shadow(@shadow-1);
+      background-color: lighten(at(@value, 1), 10);
     }
   }
 }
