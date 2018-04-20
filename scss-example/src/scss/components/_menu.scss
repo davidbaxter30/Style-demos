@@ -1,0 +1,28 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+
+
+.main-menu {
+  padding: map_get($padding, medium);
+  background-color: $primary;
+  margin: 0;
+  height: 70px;
+  box-shadow: $shadow-1half;
+  @include flex();
+
+  .title {
+    h2 {
+      color: $secondary;
+    }
+  }
+
+  .user {
+    i {
+      width: auto;
+      height: 80%;
+      font-size: 2em;
+      color: $accent;
+    }
+  }
+}

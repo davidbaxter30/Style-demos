@@ -1,0 +1,117 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+/// Regular font family
+/// @type List
+@text-font-stack: 'Open Sans', 'Helvetica Neue Light', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif !default;
+
+/// Code (monospace) font family
+/// @type List
+@code-font-stack: 'Courier New', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', monospace !default;
+
+/// z-index layer values
+/// @type List
+@layer:  1, 500, 10, 15;
+
+/// padding values
+/// @type List
+@padding: (
+        'small': 5px,
+        'medium': 10px,
+        'large': 20px
+) !default;
+
+/// margin values
+/// @type List
+@margin: (
+        'small': 10px,
+        'medium': 20px,
+        'large': 40px
+) !default;
+
+
+/// Container's maximum width
+/// @type Length
+@max-width: 1180px !default;
+
+
+// Map with much breakpoints
+@breakpoints: (
+        small: 320px,
+        medium: 600px,
+        large: 768px
+);
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+@breakpoints: (
+        'small': 320px,
+        'medium': 768px,
+        'large': 1024px,
+) !default;
+
+@border-radius: 3px;
+
+/// Copy text color
+/// @type Color
+@text-color: #2d3037 !default;
+
+/// Primary color
+/// @type Color
+@primary: #1e507f !default;
+
+/// Main brand color
+/// @type Color
+@secondary: #E8C547 !default;
+
+/// Main brand color
+/// @type Color
+@warn: #ff6a6a !default;
+
+/// accent color
+/// @type Color
+@accent: #CDD1C4 !default;
+
+/// grey
+/// @type Color
+@grey: #4D5061 !default;
+
+/// Dark grey
+/// @type Color
+@dark-grey: #30323D !default;
+
+/// Light grey
+/// @type Color
+@light-grey: lighten(@grey, 10) !default;
+
+
+/// Shadow Heights
+@shadow-1: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+@shadow-1half: 0 3px 3px 0 rgba(0, 0, 0, 0.14), 0 1px 7px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -1px rgba(0, 0, 0, 0.2);
+
+@shadow-2: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+
+@shadow-3: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3);
+
+@shadow-4: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3);
+
+@shadow-5: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.3);
+
+
+// buttons
+@buttons: (
+  primary: (@primary, @accent),
+  secondary: (@secondary, @primary),
+  disabled: (@light-grey, lighten(@light-grey, 50)),
+  warn: (@warn, lighten(@light-grey, 50))
+);
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   @base-url: 'http://cdn.example.com/assets/';
+@base-url: '/assets/' !default;
